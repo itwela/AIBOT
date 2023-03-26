@@ -15,4 +15,3 @@ My plan is to run the algorithm with EURJPY to build equity up. Im going to star
 From my findings so far, I have leanred a great deal. The biggest thing Ive learned so far is the power of taking SMALL profits. I cant wait to show the power of the findings I have found and will continue to find.
 
 
-My next steps are to get this test data and link it with chart.js
