@@ -15,3 +15,7 @@ My plan is to run the algorithm with EURJPY to build equity up. Im going to star
 From my findings so far, I have leanred a great deal. The biggest thing Ive learned so far is the power of taking SMALL profits. I cant wait to show the power of the findings I have found and will continue to find.
 
 
+UPDATE:
+
+I have come to find out that in tradingview, there is an issue with something called repainting. Basically you get false signals that your original strategy never even shows was taken. Because of this, I may not be able to run my algos on ALL pairs listed YET, but I find a way to battle the repainting and came up with a strategy that I believe is profitable enough to do better than professional traders. I am currently forward testing (Using Live Data) my bot to CONFIRM that the repainting issue is fixed. Once the forward testing is completed I decided it would be best to try a funded challenge. The risk is surprisingly small there and if successful, I would be (We would I guess)a professional trader and would have proved my point. 
+
