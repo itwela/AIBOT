@@ -11,6 +11,6 @@ I have come to find out that in tradingview, there is an issue with something ca
 
 March 31:
 
-I let the algo run from Wednesday to Friday and I made 1% in thise 2 days. With ironically a 60% win rate. Which is exactly in line with my longer backtest. Next week, Im going to run tbe algo on a challenge account. I was definitely scared but I wanted to see how it dealt with drawdown and before I knew it it was up 1%. and it lost SIX time and still ended up with my expected profit for the week. Im excited but still nervous to start this for real but theres no time better than right now!
+I let the algo run from Wednesday to Friday and I made 1% in those 2 days. With ironically a 60% win rate. Which is exactly in line with my longer backtest. Next week, Im going to run tbe algo on a challenge account (100 hopefully). I was definitely scared but I wanted to see how it dealt with drawdown and before I knew it it was up 1%. and it lost SIX time and still ended up with my expected profit for the week. Im excited but still nervous to start this for real but theres no time better than right now!
 
 
