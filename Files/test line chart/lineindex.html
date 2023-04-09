@@ -2,62 +2,46 @@
 <meta charset="utf-8">
 
 <!-- Load d3.js -->
-<script src="https://d3js.org/d3.v6.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<!-- For some reason I have never been able to load js files into my html files. I will just do the js
+    code in this html file and then when I figure out how to do this correctly just copy my js code into the
+    data.js file -->
+<script src="/Users/itwelaibomu/code portfolio/finance ai/AIBOT/Files/test line chart/data.js"></script>
 
 <!-- Create a div where the graph will take place -->
-<div id="my_dataviz"></div>
+<div id="container" style="height: 500px"></div>
 
 <script>
-
-// set the dimensions and margins of the graph
-const margin = {top: 10, right: 30, bottom: 30, left: 60},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
-
-// append the svg object to the body of the page
-const svg = d3.select("#my_dataviz")
-  .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform", `translate(${margin.left},${margin.top})`);
-
 //Read the data
-d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/3_TwoNumOrdered_comma.csv",
-
-  // When reading the csv, I must format variables:
-  function(d){
-    return { date : d3.timeParse("%Y-%m-%d")(d.date), value : d.value }
-  }).then(
-
-  // Now I can use this dataset:
-  function(data) {
-
-    // Add X axis --> it is a date format
-    const x = d3.scaleTime()
-      .domain(d3.extent(data, function(d) { return d.date; }))
-      .range([ 0, width ]);
-    svg.append("g")
-      .attr("transform", `translate(0, ${height})`)
-      .call(d3.axisBottom(x));
-
-    // Add Y axis
-    const y = d3.scaleLinear()
-      .domain([0, d3.max(data, function(d) { return +d.value; })])
-      .range([ height, 0 ]);
-    svg.append("g")
-      .call(d3.axisLeft(y));
-
-    // Add the line
-    svg.append("path")
-      .datum(data)
-      .attr("fill", "none")
-      .attr("stroke", "red")
-      .attr("stroke-width", 1.5)
-      .attr("d", d3.line()
-        .x(function(d) { return x(d.date) })
-        .y(function(d) { return y(d.value) })
-        )
-
+//"https://raw.githubusercontent.com/itwela/AIBOT/main/Files/test%20line%20chart/gooddemodata.csv",
+var myChart =
+Highcharts.chart('container',
+{
+  title: {
+    text: 'The Sweet Science Of Trading',
+  },
+  subtitle: {
+    text: 'An algorithmic approach to trading. Created by Itwela Ibomu',
+  },
+    chart: {
+      type: 'line'
+    },
+    xAxis: {
+      type: 'datetime'
+    },
+    yAxis: {
+      title: {
+        text: 'Profit'
+      }
+    },
+    series: [{
+      pointStart: Date.now() - 29 * 24 * 60 * 60 * 1000,
+      pointInterval: 24 * 60 * 60 * 1000,
+      type: 'area',
+      name: 'Demo Data',
+      data: [6,8,2,2,5,6],
+      color: 'green'
+    }],
 })
 </script>
